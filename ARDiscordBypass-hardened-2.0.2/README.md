@@ -1,4 +1,4 @@
-# ARDiscordBypass — hardened Windows build 2.0.2
+# ARDiscordBypass — hardened Windows build 2.0.0
 
 Esta é uma variante local endurecida do ARDiscordBypass original.
 
