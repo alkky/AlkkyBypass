@@ -104,12 +104,17 @@ int main(int argc, char *argv[]) {
     logf("Proxy validado selecionado.");
   }
 
-  if (!launchDiscord(discordExe, selectedProxy)) {
+    if (!launchDiscord(discordExe, selectedProxy)) {
     logf("ERRO: não foi possível iniciar o Discord.");
     WSACleanup();
     return 1;
   }
+
   logf("Discord iniciado.");
   WSACleanup();
+
+  std::cout << "\nPressione ENTER para sair...\n";
+  std::cin.get();
+
   return 0;
 }
