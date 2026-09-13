@@ -11,5 +11,5 @@ baixe um dos releases/compile você mesmo e rode o EXE. quando terminado, o disc
 
 ## nota:
 
-isso é só uma versão privada pra uso nosso do ARDiscordBypass disponível em https://github.com/alrigroup/ARDiscordBypass, nao distribua isso sem permissao minha pq vai dar ruim daí;
+isso é só uma versão privada pra uso de quem eu permitir, ARDiscordBypass do alrigroup é disponível em https://github.com/alrigroup/ARDiscordBypass, nao distribua isso sem permissao minha pq vai dar ruim daí;
 nao dependa totalmente disso depois de atualização do discord/das leis do brasil.
