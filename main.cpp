@@ -1,20 +1,20 @@
 #ifdef _WIN32
 #include "os/windows/platform.h"
 #else
-#error "This hardened package currently targets Windows 10/11."
+#error "esse bagulho é pra win 11/10."
 #endif
 
 #include <regex>
 #include <iostream>
 #include <string>
 
-#define APP_VERSION "2.0.0-hardened"
+#define APP_VERSION "2.0.0"
 #define GITHUB_REPO "alkky/discordbypass-hardened"
 
 void logf(const std::string &msg) { std::cout << "ARDCB - " << msg << std::endl; }
 
 static std::string fetchLatestVersion() {
-  HINTERNET hSession = WinHttpOpen(L"ARDCB/2.0.0-hardened",
+  HINTERNET hSession = WinHttpOpen(L"ARDCB/2.0.0",
                                    WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
                                    WINHTTP_NO_PROXY_NAME,
                                    WINHTTP_NO_PROXY_BYPASS, 0);
