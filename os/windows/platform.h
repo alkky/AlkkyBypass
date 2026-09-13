@@ -104,13 +104,10 @@ inline std::wstring locateDiscordExe() {
 }
 
 inline bool launchDiscord(const std::wstring &exePath, const std::string &proxyEndpoint) {
-  // lpApplicationName is kept separate from the command line so the executable
-  // path itself is never interpreted as shell syntax.
   std::wstring cmdLine;
   if (!proxyEndpoint.empty()) {
     std::wstring wProxy(proxyEndpoint.begin(), proxyEndpoint.end());
-    cmdLine = L"--proxy-server=socks5://" + wProxy +
-              L" --proxy-bypass-list=\"cdn.discordapp.com;*.discordapp.net;*.discord.media;<local>\"";
+    cmdLine = L"--proxy-server=socks5://" + wProxy ;
   }
 
   SECURITY_ATTRIBUTES sa{sizeof(sa), nullptr, TRUE};
