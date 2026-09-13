@@ -57,18 +57,18 @@ static std::string fetchLatestVersion() {
 static void checkForUpdate() {
   logf("Verificando atualizações...");
   const std::string latest = fetchLatestVersion();
-  if (latest.empty()) { logf("Não foi possível verificar atualizações."); return; }
+  if (latest.empty()) { logf("num foi possível verificar atualizações."); return; }
   if (latest != APP_VERSION) {
-    logf("Há uma versão diferente disponível no GitHub: " + latest);
+    logf("tem uma versão diferente disponível no git: " + latest);
   } else {
-    logf("Você está na versão " APP_VERSION ".");
+    logf("cê tá na versão " APP_VERSION ".");
   }
 }
 
 int main(int argc, char *argv[]) {
   SetConsoleOutputCP(CP_UTF8);
-  std::cout << "ARDiscordBypass hardened " APP_VERSION << "\n";
-  std::cout << "Somente entrada de proxy validada é aceita; nenhum comando externo passa por shell.\n\n";
+  std::cout << "AlkPass" APP_VERSION << "\n";
+  std::cout << "lol. olhe, minha camera funciona denovo!\n\n";
 
   WSADATA wsaData{};
   WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -85,35 +85,35 @@ int main(int argc, char *argv[]) {
     }
   }
   if (discordExe.empty()) {
-    logf("ERRO: Não encontrei a instalação do Discord.");
+    logf("ERRO: não encontrei a instalação do discord.");
     WSACleanup();
     return 1;
   }
 
-  logf("Discord encontrado: " + std::string(discordExe.begin(), discordExe.end()));
+  logf("discord encontrado: " + std::string(discordExe.begin(), discordExe.end()));
   if (isDiscordRunning()) {
-    logf("Discord aberto detectado; encerrando para aplicar os argumentos.");
+    logf("discord aberto detectado; encerrando para aplicar os argumentos.");
     killDiscord();
   }
 
   logf("Buscando um proxy SOCKS5...");
   const std::string selectedProxy = findWorkingProxy();
   if (selectedProxy.empty()) {
-    logf("Nenhum proxy validado respondeu; abrindo o Discord normalmente.");
+    logf("nenhum proxy validado respondeu; abrindo o discord normalmente.");
   } else {
-    logf("Proxy validado selecionado.");
+    logf("proxy validado selecionado.");
   }
 
     if (!launchDiscord(discordExe, selectedProxy)) {
-    logf("ERRO: não foi possível iniciar o Discord.");
+    logf("ERRO: não foi possível iniciar o discord.");
     WSACleanup();
     return 1;
   }
 
-  logf("Discord iniciado.");
+  logf("discord iniciado.");
   WSACleanup();
 
-  std::cout << "\nPressione ENTER para sair...\n";
+  std::cout << "\npressione ENTER para sair...\n";
   std::cin.get();
 
   return 0;
