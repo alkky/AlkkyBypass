@@ -254,7 +254,8 @@ inline std::string normalizeProxy(std::string proxy) {
 inline std::string fetchProxies() {
   const std::wstring curl = findCurl();
   if (curl.empty()) return "";
-  const std::wstring url = L"https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolipport&format=text&protocol=socks5&timeout=5000";
+  const std::wstring url =
+    L"https://cdn.jsdelivr.net/gh/proxyscrape/free-proxy-list@main/proxies/protocols/socks5/data.txt";
   return runProcessCapture(curl, {L"-s", L"--max-time", L"10", url});
 }
 
