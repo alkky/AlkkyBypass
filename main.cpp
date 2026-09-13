@@ -9,7 +9,7 @@
 #include <string>
 
 #define APP_VERSION "2.0.0"
-#define GITHUB_REPO "alkky/discordbypass-hardened"
+#define GITHUB_REPO "alkky/AlkkyBypass"
 
 void logf(const std::string &msg) { std::cout << "ARDCB - " << msg << std::endl; }
 
