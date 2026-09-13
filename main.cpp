@@ -8,13 +8,13 @@
 #include <iostream>
 #include <string>
 
-#define APP_VERSION "2.0.2-hardened"
-#define GITHUB_REPO "alrigroup/ARDiscordBypass"
+#define APP_VERSION "2.0.0-hardened"
+#define GITHUB_REPO "alkky/discordbypass-hardened"
 
 void logf(const std::string &msg) { std::cout << "ARDCB - " << msg << std::endl; }
 
 static std::string fetchLatestVersion() {
-  HINTERNET hSession = WinHttpOpen(L"ARDCB/2.0.2-hardened",
+  HINTERNET hSession = WinHttpOpen(L"ARDCB/2.0.0-hardened",
                                    WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
                                    WINHTTP_NO_PROXY_NAME,
                                    WINHTTP_NO_PROXY_BYPASS, 0);
